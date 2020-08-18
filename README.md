@@ -6,4 +6,4 @@ Install python 3.5 or higher (see e.g. https://realpython.com/installing-python/
 
 # Use
 
-```python3 blacksquare_cutter.py <input image>```
+```python3 rectanglecutter.py <input image>```
