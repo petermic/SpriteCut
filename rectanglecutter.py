@@ -97,7 +97,9 @@ outputImage.save("transparent_bkgd.png")
 # for each rectangle, create and save an image with the contents of that rectangle
 sprite_counter = 0
 for r in rectangles:
+    # convert from (row, col) to (x,y), and trim off rectangle border on one side
     rec_xy = (r[1]+1,r[0]+1,r[3],r[2])
+    # skip if too small
     if abs(rec_xy[2]-rec_xy[0]) < minimumSpriteSize[0] or abs(rec_xy[3]-rec_xy[1]) < minimumSpriteSize[1]:
         continue
     sprite_img = outputImage.crop(rec_xy)
